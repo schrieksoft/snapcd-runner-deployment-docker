@@ -1,0 +1,23 @@
+services:
+  snapcd-runner:
+    image: ghcr.io/schrieksoft/snapcd-runner:azure-0.1.4
+    container_name: snapcd-runner
+    restart: unless-stopped
+    network_mode: host
+    entrypoint: ["./SnapCd.Runner", "--urls", "http://0.0.0.0:5001"]
+    volumes:
+      - ./config/appsettings.json:/app/appsettings.json:ro
+      - runner-data:/app/runnerdata
+
+      # Pre-approved hooks directory (optional)
+      - ./config/preapproved-hooks:/app/preapproved-hooks:ro
+
+      # SSH keys for private Git repositories (optional)
+      - ./config/known_hosts:/root/.ssh/known_hosts:ro
+      - ./config/id_rsa:/root/.ssh/id_rsa:ro
+
+      # Terraform/OpenTofu binaries from host (pick one or both, edit path as needed)
+      - /usr/local/bin/terraform:/usr/local/bin/terraform:ro
+      - /usr/local/bin/tofu:/usr/local/bin/tofu:ro
+volumes:
+  runner-data:

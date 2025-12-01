@@ -1,0 +1,7 @@
+# SSH private keys - never commit these
+config/id_rsa
+config/id_ed25519
+config/*.pem
+
+# Application settings with secrets
+config/appsettings.json
