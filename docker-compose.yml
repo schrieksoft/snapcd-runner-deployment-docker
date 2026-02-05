@@ -7,7 +7,8 @@ services:
     entrypoint: ["./SnapCd.Runner", "--urls", "http://0.0.0.0:5001"]
     volumes:
       - ./config/appsettings.json:/app/appsettings.json:ro
-      - runner-data:/app/runnerdata
+      - ~/.snapcd/runner-data:/app/runnerdata
+      # - runner-data:/app/runnerdata # use this instead if you want to use a virtualized volume
 
       # Pre-approved hooks directory (optional)
       - ./config/preapproved-hooks:/app/preapproved-hooks:ro

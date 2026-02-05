@@ -57,7 +57,7 @@ ssh-keyscan your-git-server.com >> config/known_hosts
 
 You must provide your own `Engine` binary (either `tofu` or `terraform` or both, depending on your needs), for example by mounting them from your local host. You can find their installation directories with:
 
-> Please note that Snap CD strives to support the latest available version of `tofu`. For `terraform` we design fo binaries up to release [1.5.7](https://github.com/hashicorp/terraform/releases/tag/v1.5.7), which was the final release under the [Mozilla Public License 2.0](https://github.com/hashicorp/terraform/blob/v1.5.7/LICENSE). It was not developed for later versions, such as those published under the [Business Source License 1.1 (BSL 1.1)](https://github.com/hashicorp/terraform/blob/v1.6.0/LICENSE).
+> Please note that Snap CD strives to support the latest available version of `tofu`. For `terraform` we design for binaries up to release [1.5.7](https://github.com/hashicorp/terraform/releases/tag/v1.5.7), which was the final release under the [Mozilla Public License 2.0](https://github.com/hashicorp/terraform/blob/v1.5.7/LICENSE). It was not developed for later versions, such as those published under the [Business Source License 1.1 (BSL 1.1)](https://github.com/hashicorp/terraform/blob/v1.6.0/LICENSE).
 
 ```bash
 which terraform
@@ -107,7 +107,7 @@ docker compose down
 
 ### Azure Authentication
 
-If you wish to use the `azurerm` or `azuread` terraform providers using the Azure CLI, exec into the runner and log in.
+If you wish to use the `azurerm` or `azuread` terraform providers using the Azure CLI, exec into the runner and log in. Alternatively set Azure (or AWS, GCP etc.) credentials as environment variables as needed.
 
 ```bash
 docker compose exec snapcd-runner /bin/bash
