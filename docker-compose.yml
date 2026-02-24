@@ -1,6 +1,6 @@
 services:
   snapcd-runner:
-    image: ghcr.io/schrieksoft/snapcd-runner:azure-0.1.12
+    image: ghcr.io/schrieksoft/snapcd-runner:azure-0.1.13
     container_name: snapcd-runner
     restart: unless-stopped
     network_mode: host
