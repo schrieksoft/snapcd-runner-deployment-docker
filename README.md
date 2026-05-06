@@ -25,12 +25,12 @@ Edit `config/appsettings.json` with your configuration values:
 
 | Setting | Description |
 |---------|-------------|
-| `Runner.Id` | The unique ID of the runner (GUID format, obtained from SnapCD server) |
+| `Runner.Id` | The unique ID of the runner (GUID format, obtained from Snap CD Server) |
 | `Runner.Instance` | A friendly name for this runner instance |
 | `Runner.Credentials.ClientId` | Service Principal client ID for authentication |
 | `Runner.Credentials.ClientSecret` | Service Principal client secret for authentication |
 | `Runner.OrganizationId` | The organization ID this runner belongs to |
-| `Server.Url` | The URL of your SnapCD server |
+| `Server.Url` | The URL of your Snap CD Server |
 | `WorkingDirectory.WorkingDirectory` | Directory where the runner stores working files |
 | `WorkingDirectory.TempDirectory` | Directory for temporary files |
 | `HooksPreapproval.Enabled` | Enable/disable hooks preapproval feature |
