@@ -1,6 +1,6 @@
-# SnapCD Runner - Docker Deployment
+# Snap CD Runner - Docker Deployment
 
-This guide explains how to run the SnapCD Runner using Docker.
+This guide explains how to run the Snap CD Runner using Docker.
 
 ## Prerequisites
 
